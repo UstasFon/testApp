@@ -1,0 +1,57 @@
+@import "./vendors/_variables.scss";
+@import "./vendors/_extends.scss";
+
+.header {
+  background-color: $alto;
+
+
+  &_wrapper {
+    padding: 64px 0 65px 0;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &_logo {
+    float: left;
+
+    @media (max-width: 768px) {
+      float: none;
+      clear: both;
+      margin: 0 auto;
+    }
+
+    &__img {
+      width: 275px;
+      height: 104px;
+    }
+  }
+
+  &_phone-number {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+      float: none;
+      clear: both;
+      margin: 0 auto;
+    }
+
+    &__number {
+      @extend %text;
+      font-size: 40px;
+      cursor: pointer;
+      color: #767676;
+
+      &:hover {
+        color: $Cerulean;
+        transition: 300ms;
+      }
+    }
+  }
+}

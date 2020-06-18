@@ -1,0 +1,22 @@
+@import "./src/scss/vendors/variables.scss";
+@import "./src/scss/vendors/extends.scss";
+
+.description {
+  margin-bottom: 50px;
+
+  &_title {
+    @extend %smallTitle;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (max-width: 922px) {
+      margin-top: 20px;
+    }
+  }
+
+  &_text {
+    @extend %text;
+    font-size: 14px;
+  }
+}

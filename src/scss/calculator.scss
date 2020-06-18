@@ -1,0 +1,321 @@
+@import "./src/scss/vendors/variables.scss";
+@import "./src/scss/vendors/extends.scss";
+
+.calculator {
+
+  &_title {
+    @extend %smallTitle;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @media (max-width: 922px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &_wrapper {
+    height: 180px;
+
+    @media (max-width: 922px) {
+      margin-top: 20px;
+    }
+  }
+
+  &_image {
+    margin: 0 auto;
+    display: block;
+
+    &__big {
+      margin: 0;
+    }
+  }
+
+  &_model {
+    margin-top: 67px;
+    @extend %sliderModelItem;
+
+    @extend %lineAfterText;
+
+    &__big-image {
+      @extend %sliderModelItem;
+      margin-top: 20px;
+
+      @extend %lineAfterText;
+    }
+  }
+
+  &_form {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #cbc7c7;
+    padding: 40px 25px 50px 25px;
+
+    @media (max-width: 922px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &_form-prompt {
+    text-align: center;
+    @extend %paramText;
+    margin: 0 0 20px -25px;
+
+    @media (max-width: 922px) {
+      margin: 0 0 20px 77px;
+    }
+
+  }
+
+  &_form-prompt {
+    &__rotate {
+      @extend %paramText;
+      display: block;
+      width: 80px;
+      height: 24px;
+      margin: 70px 32px 0px -30px;
+      transform: rotate(-100grad);
+    }
+  }
+
+  &_form-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: 922px) {
+      flex-direction: column;
+    }
+  }
+
+  &_form-image-box {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 922px) {
+      justify-content: center;
+    }
+  }
+
+  &_form-sizes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+
+    @media (max-width: 922px) {
+      justify-content: center;
+    }
+  }
+
+  &_size-input {
+    display: block;
+    width: 90px;
+    height: 45px;
+    margin: 0 auto;
+    @extend %iputsBorder;
+    @extend %text;
+    font-size: 36px;
+    padding: 11px;
+  }
+
+  &_size-factor {
+    margin: 30px 30px 0 30px;
+    font-size: 45px;
+    @extend %titleBold;
+    color: $Cerulean;
+    font-weight: bolder;
+  }
+
+  &_size-title {
+    margin-bottom: 15px;
+    @extend %text;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  &_form-title {
+    @extend %titleBold;
+    font-size: 30px;
+    font-weight: bolder;
+    color: $Cerulean;
+    margin-bottom: 60px;
+
+    @media (max-width: 922px) {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  &_form-title_small {
+    @extend %titleBold;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 33px;
+
+    @media (max-width: 922px) {
+      text-align: center;
+    }
+  }
+
+  &_button-bar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+    @media (max-width: 922px) {
+      justify-content: center;
+    }
+  }
+
+  &_radio {
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_radio input[type=radio] {
+    display: none;
+  }
+
+  &_radio label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 1px;
+    bottom: 3px;
+    @extend %iputsBorder;
+    border-radius: 50%;
+  }
+
+  &_radio-name {
+    font-size: 18px;
+    margin: 5px 5px 5px 33px;
+    display: inline-block;
+    @extend %text;
+
+    @media (max-width: 480px) {
+      font-size: 15px;
+    }
+  }
+
+  &_select-wrapper {
+    position: relative;
+    width: 358px;
+    height: 44px;
+    @extend %iputsBorder;
+    padding: 10px 0 10px 20px;
+    @extend %text;
+    font-size: 18px;
+
+    @media (max-width: 922px) {
+      margin: 0 auto;
+    }
+    
+    @media (max-width: 480px) {
+      width: 258px;
+    }
+
+      &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: 26px;
+      top: 9px;
+      background-image: url("../../dist/images/selectArrow.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &_form-list {
+    width: 305px;
+    height: 24px;
+    @extend %text;
+    font-size: 18px;
+    border: none;
+    outline: none;
+
+    @media (max-width: 480px) {
+      width: 205px;
+    }
+  }
+
+  &_form-confirm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+
+    @media (max-width: 922px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &_number-wrapper {
+    width: 280px;
+    height: 45px;
+    position: relative;
+    margin-right: 20px;
+
+    @media (max-width: 922px) {
+      margin-right: 0px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 43px;
+      height: 43px;
+      position: absolute;
+      left: 1px;
+      bottom: 1px;
+      background-image: url("../../dist/images/user.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &_number-input {
+    width: 280px;
+    height: 45px;
+    background-color: $Silver;
+    outline: none;
+    border-radius: 7px;
+    border: none;
+    display: block;
+    @extend %text;
+    font-size: 18px;
+    padding: 5px 5px 5px 50px;
+  }
+
+  &_form-button {
+    width: 280px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background-color: $ColdPurple;
+    outline: none;
+    color: #ffffff;
+    @extend %titleBold;
+    font-size: 20px;
+    font-weight: bold;
+
+    @media (max-width: 922px) {
+      margin-top: 20px;
+    }
+  }
+}

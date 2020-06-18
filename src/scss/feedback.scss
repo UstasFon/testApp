@@ -1,0 +1,94 @@
+@import "./src/scss/vendors/variables.scss";
+@import "./src/scss/vendors/extends.scss";
+
+.feedback {
+  background-image: url("./images/bg.png");
+  background-repeat: no-repeat;
+
+
+  &_title {
+    @extend %smallTitle;
+    margin: 0 0 20px 70px;
+
+    @media (max-width: 650px) {
+      margin: 0 0 27px 0;
+      text-align: center;
+    }
+  }
+
+  &_wrapper {
+    padding: 65px 0 95px 100px;
+
+    @media (max-width: 650px) {
+      padding: 0;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 8px 25px 10px;
+  width: 365px;
+  height: 273px;
+  background-color: $ColdPurple;
+
+  @media (max-width: 650px) {
+    margin: 0 auto;
+  }
+
+  &_title {
+    @extend %text;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    word-spacing: -0.5px;
+    letter-spacing: -0.7px;
+    margin-bottom: 27px;
+  }
+
+  &_input {
+    @extend %formItem;
+    padding: 10px 0 10px 20px;
+  }
+
+  &_button {
+    @extend %formItem;
+    margin-top: 25px;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      transition: 300ms;
+      background-color: #ffc087;
+    }
+  }
+}
+
+.message {
+  width: 300px;
+  height: 106px;
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  background-color: $ColdPurple;
+  padding: 30px;
+
+  &_text {
+    text-align: center;
+    @extend %titleBold;
+    font-weight: bold;
+    font-size: 17px;
+    color: #ffffff;
+  }
+}
+
+.closing {
+  width: 300px;
+  height: 106px;
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  transition: 300ms;
+  opacity: 100%;
+}

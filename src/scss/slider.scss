@@ -1,0 +1,73 @@
+@import "./src/scss/vendors/variables.scss";
+@import "./src/scss/vendors/extends.scss";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 60px 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &_title {
+    @extend %smallTitle;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+
+  &_box {
+    width: 707px;
+    height: 304px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 1px #cbc7c7;
+    margin: 0 auto;
+    padding: 8px;
+
+    &__back {
+      width: 692px;
+      height: 287px;
+      background-color: #aeaeae;
+    }
+  }
+
+  &_items-wrapper {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__button {
+      list-style-type: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: solid 3px #dddddd;
+      margin-right: 20px;
+      padding: 2px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $ColdPurple;
+        border-radius: 50%;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:active:before {
+        display: block;
+      }
+
+    }
+  }
+}
